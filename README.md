@@ -13,11 +13,11 @@
 
 ## 📊 Статистика GitHub
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ТВІЙ_НІК&show_icons=true&theme=radical" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=NastyaSinenko&show_icons=true&theme=radical" alt="GitHub stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ТВІЙ_НІК&layout=compact&theme=radical" alt="Top Langs" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NastyaSinenko&layout=compact&theme=radical" alt="Top Langs" />
 </p>
 
 ---
