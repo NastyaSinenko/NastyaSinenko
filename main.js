@@ -35,21 +35,21 @@ function formattedPhone(phone) {
 
   let local = null;
 
-  // ===== Перевіряємо дозволені формати =====
+ 
 
-  // 1) Формат "+380XXXXXXXXX" → 13 символів з "+"
+  
   if (/^\+380\d{9}$/.test(phone)) {
-    local = '0' + digits.slice(3); // "+380664567890" → "0664567890"
+    local = '0' + digits.slice(3); 
   }
-  // 2) Формат "380XXXXXXXXX" (без "+")
+ 
   else if (/^380\d{9}$/.test(digits)) {
     local = '0' + digits.slice(3);
   }
-  // 3) Формат "80XXXXXXXXX" (11 цифр, починається з 80)
+  
   else if (/^80\d{9}$/.test(digits)) {
-    local = digits.slice(1); // "80664567890" → "0664567890"
+    local = digits.slice(1); 
   }
-  // 4) Формат "0XXXXXXXXX" (10 цифр, починається з 0)
+ 
   else if (/^0\d{9}$/.test(digits)) {
     local = digits; // "0671234567"
   }
@@ -57,7 +57,7 @@ function formattedPhone(phone) {
     return "Неправильний формат номера!";
   }
 
-  // Розбиваємо на частини
+  
   const code = local.slice(0, 3);
   const part1 = local.slice(3, 6);
   const part2 = local.slice(6, 8);
@@ -66,7 +66,7 @@ function formattedPhone(phone) {
   return `+38 (${code}) ${part1}-${part2}-${part3}`;
 }
 
-// ==== Інтерактивна версія (завдання *) ====
+
 function task2() {
   let phone = prompt("Введіть номер телефону:");
   if (!phone) return;
@@ -75,9 +75,10 @@ function task2() {
   alert(`Результат:\n${result}`);
 }
 
-// ==== Тести ====
+
 console.log(formattedPhone('+380664567890')); // +38 (066) 456-78-90
 console.log(formattedPhone('80664567890'));   // +38 (066) 456-78-90
 console.log(formattedPhone('80971234567'));   // +38 (097) 123-45-67
 console.log(formattedPhone('0671234567'));    // +38 (067) 123-45-67
+
 console.log(formattedPhone('123456'));    
