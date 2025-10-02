@@ -35,14 +35,14 @@ class Pokemon {
     }
 }
 
-// --- Создание игроков ---
+
 const player1 = new Pokemon("Pikachu", "character");
 const player2 = new Pokemon("Charmander", "enemy");
 
 player1.renderHP();
 player2.renderHP();
 
-// --- Кнопки ---
+
 const $btnKick = document.getElementById("btn-kick");
 $btnKick.addEventListener("click", function () {
     player1.attack(player2, 20, 5);
@@ -61,4 +61,5 @@ $btnSpecial.addEventListener("click", function () {
     if (player2.hp > 0) {
         player2.attack(player1, 20, 5);
     }
+
 });
